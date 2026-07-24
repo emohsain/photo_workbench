@@ -1,2 +1,25 @@
-<h1>Photos#new</h1>
-<p>Find me in app/views/photos/new.html.erb</p>
+<h1>Upload a Photo</h1>
+
+<%= form_with model: @photo do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :taken_at %>
+    <%= form.datetime_field :taken_at %>
+  </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <%= form.submit "Upload" %>
+<% end %>
