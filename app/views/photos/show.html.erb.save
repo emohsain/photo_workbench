@@ -5,7 +5,8 @@
 <% end %>
 
 <p><strong>Description:</strong> <%= @photo.description %></p>
-<p><strong>Taken at:</strong> <%= @photo.taken_at %></p> 
+<p><strong>Taken at:</strong> <%= @photo.taken_at %></p>
+
+<%= link_to "Delete this photo", @photo, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } 
 <%= link_to "Edit this photo", edit_photo_path(@photo) %>
-<%= link_to "Delete this photo", @photo, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
 <%= link_to "Back to all photos", photos_path %>

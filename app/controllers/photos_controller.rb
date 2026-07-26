@@ -19,6 +19,22 @@ class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
   end
+def edit
+  @photo = Photo.find(params[:id])
+end
+def destroy
+  @photo = Photo.find(params[:id])
+  @photo.destroy
+  redirect_to photos_path, notice: "Photo deleted successfully."
+end
+def update
+  @photo = Photo.find(params[:id])
+  if @photo.update(photo_params)
+    redirect_to @photo, notice: "Photo updated successfully."
+  else
+    render :edit, status: :unprocessable_entity
+  end
+end
 
   private
 
