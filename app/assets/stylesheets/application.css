@@ -8,3 +8,19 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+body {
+  font-family: -apple-system, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #222;
+}
+
+img {
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+a {
+  color: #4527a0;
+}

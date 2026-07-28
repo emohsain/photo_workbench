@@ -11,5 +11,9 @@
     <% end %>
 
     <p><%= photo.description %></p>
+
+ <%= link_to "Edit", edit_photo_path(photo) %> |
+    <%= link_to "Delete", photo, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
   </div>
 <% end %>
+  
